@@ -184,7 +184,7 @@ h1, h2, h3, h4 {
 .nx-hero {
   background-color: var(--primary-color);
   background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(15, 31, 56, 0.95)), url('https://res.cloudinary.com/dhqs0a0bh/image/upload/v1786500716/Globe2.jpg');
-  background-size: cover; background-position: center; padding: 100px 0 100px 10px;
+  /* background-size: cover; background-position: center; padding: 100px 0 100px 10px; */
 }
 .nx-hero-content { flex: 1 1 100%; max-width: 800px; }
 .nx-hero .nx-title { font-size: clamp(1.8rem, 5vw, 3.5rem); color: var(--bg-white); line-height: 1.15; margin-bottom: 24px; }
@@ -574,21 +574,24 @@ h1, h2, h3, h4 {
   padding: 0; 
   position: relative;
   width: 100%;
+  height: 90vh;
 }
 
 .nx-hero-swiper {
   width: 100%;
-  min-height: 90vh; /* Sesuaikan tinggi hero */
+  height: 100%;
 }
 
-.nx-hero-slide {
+.nx-hero, .nx-hero-slide {
   position: relative;
-  display: flex;
+  display: flex !important;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 90vh;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  height: 100%;
+  min-height: unset;
+  padding: 0 20px;
 }
 
 .nx-hero-overlay {
